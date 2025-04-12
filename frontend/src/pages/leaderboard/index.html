@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leaderboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../main/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="../../../index.html" class="logo">RETRO RUSH</a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="../../../index.html">HOME</a>
+            <a href="#">GAMES</a>
+            <a href="index.html">LEADERBOARD</a>
+            <a href="../login/login.html">LOGIN / SIGNUP</a>
+            <a href="../profile/index.html">PROFILE</a>
+        </nav>
+    </header>
+
+    
+    <main class="table" id="customers_table">
+
+        <section class="table__header">
+
+            <h1>leaderboard</h1>
+
+            <div class="input-group">
+                <input type="search" placeholder="Search...">
+                <img src="leaderboard_img/search.png" alt="">
+            </div>
+
+            <div class="export__file">
+                <label for="export-file" class="export__file-btn" title="Export File"></label>
+                <input type="checkbox" id="export-file">
+                <div class="export__file-options">
+                    <label>Export As &nbsp; &#10140;</label>
+                    <label for="export-file" id="toPDF" onclick="convertToPDF()">PDF <img src="leaderboard_img/pdf.png" alt=""></label>
+                    <label for="export-file" id="toJSON">JSON <img src="leaderboard_img/json.png" alt=""></label>
+                    <label for="export-file" id="toCSV">CSV <img src="leaderboard_img/csv.png" alt=""></label>
+                    <label for="export-file" id="toEXCEL">EXCEL <img src="leaderboard_img/excel.png" alt=""></label>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="table__body">
+
+            <table id="mainTable">
+                <thead>
+                    <tr>
+                        <th> Rank <span class="icon-arrow"><i class="fa-solid fa-arrow-up"></i></span></th>
+                        <th> Player <span class="icon-arrow"><i class="fa-solid fa-arrow-up"></i></span></th>
+                        <th> Origin <span class="icon-arrow"><i class="fa-solid fa-arrow-up"></i></span></th>
+                        <th> Username <span class="icon-arrow"><i class="fa-solid fa-arrow-up"></i></span></th>
+                        <th> Title <span class="icon-arrow"><i class="fa-solid fa-arrow-up"></i></span></th>
+                        <th> Level <span class="icon-arrow"><i class="fa-solid fa-arrow-up"></i></span></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td> 1 </td>
+                        <td> <img src="leaderboard_img/player1.jpg" alt="">Manish Jogi</td>
+                        <td> USA </td>
+                        <td> mjmonster </td>
+                        <td>
+                            <p class="status delivered">Master</p>
+                        </td>
+                        <td> <strong> $369 </strong></td>
+                    </tr>
+                    <tr>
+                        <td> 2 </td>
+                        <td><img src="leaderboard_img/player2.jpg" alt="">Nilesh Mundotia </td>
+                        <td> France </td>
+                        <td> piyush</td>
+                        <td>
+                            <p class="status cancelled">Divine</p>
+                        </td>
+                        <td> <strong> $481 </strong> </td>
+                    </tr>
+                    <tr>
+                        <td> 3 </td>
+                        <td><img src="leaderboard_img/player3.jpg" alt=""> Piyush Khandal </td>
+                        <td> Germany </td>
+                        <td>shivon </td>
+                        <td>
+                            <p class="status shipped">Legend</p>
+                        </td>
+                        <td> <strong> $753 </strong> </td>
+                    </tr>
+                    <tr>
+                        <td> 4 </td>
+                        <td><img src="leaderboard_img/player4.jpg" alt=""> piyush porwal </td>
+                        <td> UK </td>
+                        <td> coolmohit </td>
+                        <td>
+                            <p class="status delivered">Master</p>
+                        </td>
+                        <td> <strong> $859 </strong> </td>
+                    </tr>
+                    <tr>
+                        <td> 5 </td>
+                        <td><img src="leaderboard_img/player5.jpg" alt=""> karan johar </td>
+                        <td> Russia</td>
+                        <td> itsmjhere </td>
+                        <td>
+                            <p class="status pending">King</p>
+                        </td>
+                        <td> <strong> $999 </strong> </td>
+                    </tr>
+                    <tr>
+                        <td> 6 </td>
+                        <td><img src="leaderboard_img/player6.jpg" alt=""> Jhon Doe </td>
+                        <td> Japan </td>
+                        <td> kunaldemon </td>
+                        <td>
+                            <p class="status cancelled">Divine</p>
+                        </td>
+                        <td> <strong> $178 </strong> </td>
+                    </tr>
+                    <tr>
+                        <td> 7 </td>
+                        <td><img src="leaderboard_img/player7.jpg" alt=""> Elex Morgan </td>
+                        <td> New York </td>
+                        <td> coolravi</td>
+                        <td>
+                            <p class="status delivered">Master</p>
+                        </td>
+                        <td> <strong> $789 </strong> </td>
+                    </tr>
+                    <tr>
+                        <td> 8 </td>
+                        <td><img src="leaderboard_img/player8.jpg" alt="">Sihab Uddin </td>
+                        <td> Brazil </td>
+                        <td> queenmenna </td>
+                        <td>
+                            <p class="status pending">King</p>
+                        </td>
+                        <td> <strong> $505 </strong> </td>
+                    </tr>
+                    <tr>
+                        <td> 9 </td>
+                        <td><img src="leaderboard_img/player9.jpg" alt=""> Tomlinson Thi </td>
+                        <td> Sydney </td>
+                        <td> wommoa</td>
+                        <td>
+                            <p class="status delivered">Master</p>
+                        </td>
+                        <td> <strong> $790 </strong> </td>
+                    </tr>
+                    <tr>
+                        <td> 10 </td>
+                        <td><img src="leaderboard_img/player10.jpg" alt=""> Thomson Rok </td>
+                        <td> Florida </td>
+                        <td> proheremj </td>
+                        <td>
+                            <p class="status cancelled">Divine</p>
+                        </td>
+                        <td> <strong> $581 </strong> </td>
+                    </tr>
+                    <tr>
+                        <td> 11 </td>
+                        <td><img src="leaderboard_img/player11.jpg" alt=""> Alex Smith </td>
+                        <td> Georgia </td>
+                        <td> ronakNoob </td>
+                        <td>
+                            <p class="status delivered">Master</p>
+                        </td>
+                        <td> <strong> $951 </strong> </td>
+                    </tr>
+                    <tr>
+                        <td> 12 </td>
+                        <td><img src="leaderboard_img/player12.jpg" alt=""> Rifat Ali </td>
+                        <td> Madrid </td>
+                        <td>gopala</td>
+                        <td>
+                            <p class="status pending">King</p>
+                        </td>
+                        <td> <strong> $966 </strong> </td>
+                    </tr>
+                    <tr>
+                        <td> 13 </td>
+                        <td><img src="leaderboard_img/player13.jpg" alt=""> Jhon Watson </td>
+                        <td> Arizona </td>
+                        <td> PorwalKing </td>
+                        <td>
+                            <p class="status shipped">Legend</p>
+                        </td>
+                        <td> <strong> $101 </strong> </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+        
+        <div id="no-match-message">No matching data found.</div>
+        
+    </main>
+
+    
+
+
+    <!--jQuery CDN-->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+    <!-- script for pdf -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js" integrity="sha512-w3u9q/DeneCSwUDjhiMNibTRh/1i/gScBVp2imNVAMCt6cUHIw6xzhzcPFIaL3Q1EbI2l+nu17q2aLJJLo4ZYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+    <!-- jQuery CDN -->
+     
+<footer class="footer">
+    <div class="faq">
+         <h3>Support</h3>
+         <ul>
+             <li><a href="#">About Us</a></li>
+             <li><a href="#">Help & Support</a></li>
+             <li><a href="#">Privacy Policy</a></li>
+             <li><a href="#">Terms of Service</a></li>    
+         </ul>
+    </div>
+ 
+    <div class="contact">
+         <h3>Contact Us</h3>
+         <p>For any inquiries or feedback, reach out to us:</p>
+         <div class="phone">
+             <p><strong>Phone:</strong> 1-800-GAME-123</p>
+         </div>
+         <div class="email">
+             <p><strong>Email:</strong> support@gamerush.com</p>
+         </div>
+         <div class="address">
+             <p><strong>Address:</strong> 1234 Game Street, Virtual City, World</p>
+         </div>
+         <div class="icons">
+             <a href="#"><i class='bx bxl-facebook'></i></a>
+             <a href="#"><i class='bx bxl-twitter'></i></a>
+             <a href="#"><i class='bx bxl-instagram'></i></a>
+             <a href="#"><i class='bx bxl-youtube'></i></a>
+         </div>
+    </div>
+ </footer>
+
+    <script src="app.js"></script>
+    <script src="../../main/script.js"></script>
+</body>
+</html>

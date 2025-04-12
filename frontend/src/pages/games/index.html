@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RETRO RUSH</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="card_style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        .container {
+            backdrop-filter: blur(0px);
+              display: grid;
+  grid-template-columns: 1fr 1.1fr 0.9fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "main-content main-content main-content main-content g1"
+    "main-content main-content main-content main-content g2"
+    "main-content main-content main-content main-content g3"
+    "main-content main-content main-content main-content g4"
+    "main-content main-content main-content main-content g5";
+}
+
+.main-content { grid-area: main-content; }
+
+.g1 { grid-area: g1; }
+
+.g2 { grid-area: g2; }
+
+.g3 { grid-area: g3; }
+
+.g4 { grid-area: g4; }
+
+.g5 { grid-area: g5; }
+.main-content{
+    background: rgba(255, 255, 255, 0.1);
+    border-top: 2px solid rgba(255, 255, 255, 0.2); /* Change to border-top */
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    height: 500px;
+    background: url('https://storage.googleapis.com/a1aa/image/lSOqwymo3CIUOFR5rCqWXPXslzHWHZSlInfsObYVy4iejejnA.jpg');
+    
+}
+.g1, .g2, .g3, .g4, .g5 {
+    background: rgba(255, 255, 255, 0.1);
+    border-top: 2px solid rgba(255, 255, 255, 0.2); /* Change to border-top */
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    width: 160px;
+    margin-bottom: 5px;
+    margin-left: 10px; 
+    background: url('4231127 (1).jpg');
+    
+}
+.g5{
+    margin-bottom:0px; 
+}
+
+.container2{
+    margin-top: 0px;
+    display:flex;
+    padding: 75px 150px 0px 150px;
+    justify-content: center;
+}
+.container1{
+    margin-top: 30px;
+    padding-top: 20px;
+}
+.flex-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-top: 2px solid rgba(255, 255, 255, 0.2); /* Change to border-top */
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+
+display: flex;
+
+justify-content: center;     
+
+
+height: 100%;
+padding: 15px;
+gap: 5px;
+
+}
+
+.flex-container > div{
+    height: 400px;
+    margin: 3PX;
+    width: 400PX;
+background: #ffecb3;
+border: 3px solid #ffcc80;
+border-radius: 5px;
+padding: 8px;
+}
+.game-store-container {
+    background: rgba(255, 255, 255, 0);
+    
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    margin: 0px 80px 10px 80px;
+}
+.game-store-container .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.232);
+    border-top: 2px solid rgba(255, 255, 255, 0.2); /* Change to border-top */
+    backdrop-filter: blur(10px);
+}
+.section {
+    width: 30%;
+}
+.section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.section h2 i {
+    margin-left: 10px;
+}
+.game-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.game-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+.game-info {
+    display: flex;
+    flex-direction: column;
+}
+.game-info span {
+    font-size: 16px;
+}
+.game-info .price {
+    font-size: 14px;
+    color: #b0b0b0;
+}
+.game-info .availability {
+    font-size: 14px;
+    color: #b0b0b0;
+}
+.play-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 5px 0;
+}
+.trial-available {
+    background-color: #555;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+    </style>
+</head>
+
+<body>
+    <header class="header" style="position: relative;padding: 7px 20px 7px 20px">
+        <a href="index.html" class="logo">RETRO RUSH</a>
+        <div class="search-bar">
+            <input placeholder="Search" type="text"/>
+           </div>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+
+            <div class="icons">
+                <i class="fas fa-bell">
+                </i>
+                <i class="fas fa-user">
+                </i>
+                <a class="login-btn" href="#">
+                 Log in
+                </a>
+               </div>
+        </nav>
+    </header>
+    <div class="container2">
+    <div class="container">
+        <div class="main-content">
+
+        </div>
+        <div class="g1"><a href="#"></a></div>
+        <div class="g2"><a href="#"></a></div>
+        <div class="g3"><a href="#"></a></div>
+        <div class="g4"><a href="#"></a></div>
+        <div class="g5"><a href="#"></a></div>
+      </div>
+    </div>
+    <div class="container1">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- Card 1 -->
+                <div class="swiper-slide">
+                    <div class="card" style="background-image: url('Images/game1.jpg');">
+                        <div class="card-body">
+                            <h5 class="card-title">SNAKE GAME</h5>
+                            <a href="Games/Games_output/game1_output.html" class="btn">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Card 2 -->
+                <div class="swiper-slide">
+                    <div class="card" style="background-image: url('Images/game2.jpg');">
+                        <div class="card-body">
+                            <h5 class="card-title">PING PONG</h5>
+                            <a href="Games/Games_output/game3_output.html" class="btn">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Card 3 -->
+                <div class="swiper-slide">
+                    <div class="card" style="background-image: url('Images/game3.jpg');">
+                        <div class="card-body">
+                            <h5 class="card-title">ALIEN INVASION</h5>
+                            <a href="Games/Games_output/game2_output.html" class="btn">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Card 4 -->
+                <div class="swiper-slide">
+                    <div class="card" style="background-image: url('Images/game4.jpg');">
+                        <div class="card-body">
+                            <h5 class="card-title">SPACE INVADERS</h5>
+                            <a href="#" class="btn">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Card 5 -->
+                <div class="swiper-slide">
+                    <div class="card" style="background-image: url('Images/game5.jpg');">
+                        <div class="card-body">
+                            <h5 class="card-title">PAC-MAN</h5>
+                            <a href="#" class="btn">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Card 6 -->
+                <div class="swiper-slide">
+                    <div class="card" style="background-image: url('Images/game6.jpg');">
+                        <div class="card-body">
+                            <h5 class="card-title">BREAKOUT</h5>
+                            <a href="#" class="btn">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Card 7 -->
+                <div class="swiper-slide">
+                    <div class="card" style="background-image: url('Images/game7.jpg');">
+                        <div class="card-body">
+                            <h5 class="card-title">TETRIS</h5>
+                            <a href="#" class="btn">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Card 8 -->
+                <div class="swiper-slide">
+                    <div class="card" style="background-image: url('Images/game8.jpg');">
+                        <div class="card-body">
+                            <h5 class="card-title">FROGGER</h5>
+                            <a href="#" class="btn">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Swiper Navigation Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+    <div class="game-store-container">
+        <div class="container">
+            <div class="section">
+                <h2>
+                    Top Sellers
+                    <i class="fas fa-chevron-right"></i>
+                </h2>
+                <div class="game-item">
+                    <img src="https://storage.googleapis.com/a1aa/image/FqFoL9EXffmRdExZRNQo4H0GZVqnFEbCS0MxV3gspYf8H9jnA.jpg" alt="EA SPORTS FC 25 Standard Edition" width="50" height="50"/>
+                    <div class="game-info">
+                        <span>EA SPORTS FC™ 25 Standard...</span>
+                        
+                        
+                        <span class="price">₹3,999</span>
+                    </div>
+                </div>
+                <div class="game-item">
+                    <img src="https://storage.googleapis.com/a1aa/image/FqFoL9EXffmRdExZRNQo4H0GZVqnFEbCS0MxV3gspYf8H9jnA.jpg" alt="EA SPORTS FC 25 Standard Edition" width="50" height="50"/>
+                    <div class="game-info">
+                        <span>EA SPORTS FC™ 25 Standard...</span>
+                        
+                        
+                        <span class="price">₹3,999</span>
+                    </div>
+                </div>
+                
+                <div class="game-item">
+                    <img src="https://storage.googleapis.com/a1aa/image/lOL4iYnJWhZOPxzbSfNv2MxeDwL1Yef5aB3BVaSq1ezZfof4JA.jpg" alt="Marvel Rivals" width="50" height="50"/>
+                    <div class="game-info">
+                        <span>Marvel Rivals</span>
+                        <span class="availability">Available 12/06/24</span>
+                    </div>
+                </div>
+                <div class="game-item">
+                    <img  src="https://storage.googleapis.com/a1aa/image/fJUIMquTZK1lOCUKv41MeyQo6nsFtwXGVDCSn125IaN1jejnA.jpg" width="50"/>
+                    <div class="game-info">
+                        <span>Marvel Rivals</span>
+                        <span class="availability">Available 12/06/24</span>
+                    </div>
+                </div>
+                    
+                <!-- [Additional top seller items] -->
+            </div>
+            
+            <div class="section">
+                <h2>
+                    Most Played
+                    <i class="fas fa-chevron-right"></i>
+                </h2>
+                <div class="game-item">
+                    <img src="https://storage.googleapis.com/a1aa/image/lSOqwymo3CIUOFR5rCqWXPXslzHWHZSlInfsObYVy4iejejnA.jpg" alt="Fortnite" width="50" height="50"/>
+                    <div class="game-info">
+                        <span>Fortnite</span>
+                        <span class="price">Free</span>
+                    </div>
+                </div>
+                <div class="game-item">
+                    <img src="https://storage.googleapis.com/a1aa/image/lOL4iYnJWhZOPxzbSfNv2MxeDwL1Yef5aB3BVaSq1ezZfof4JA.jpg" alt="Marvel Rivals" width="50" height="50"/>
+                    <div class="game-info">
+                        <span>Marvel Rivals</span>
+                        <span class="availability">Available 12/06/24</span>
+                    </div>
+                </div>
+
+            
+                <!-- [Additional most played items] -->
+            </div>
+            
+            <div class="section">
+                <h2>
+                    Top Upcoming 
+                    <i class="fas fa-chevron-right"></i>
+                </h2>
+                <div class="game-item">
+                    <img src="https://storage.googleapis.com/a1aa/image/lOL4iYnJWhZOPxzbSfNv2MxeDwL1Yef5aB3BVaSq1ezZfof4JA.jpg" alt="Marvel Rivals" width="50" height="50"/>
+                    <div class="game-info">
+                        <span>Marvel Rivals</span>
+                        <span class="availability">Available 12/06/24</span>
+                    </div>
+                </div>
+                <div class="game-item">
+                    <img src="https://storage.googleapis.com/a1aa/image/lOL4iYnJWhZOPxzbSfNv2MxeDwL1Yef5aB3BVaSq1ezZfof4JA.jpg" alt="Marvel Rivals" width="50" height="50"/>
+                    <div class="game-info">
+                        <span>Marvel Rivals</span>
+                        <span class="availability">Available 12/06/24</span>
+                    </div>
+                </div>
+                <div class="game-item">
+                    <img src="https://storage.googleapis.com/a1aa/image/lSOqwymo3CIUOFR5rCqWXPXslzHWHZSlInfsObYVy4iejejnA.jpg" alt="Fortnite" width="50" height="50"/>
+                    <div class="game-info">
+                        <span>Fortnite</span>
+                        <span class="price">Free</span>
+                    </div>
+                    
+                <!-- [Additional wishlist items] -->
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="container1">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- Card 1 -->
+                <div class="swiper-slide">
+                    <div class="card" style="background-image: url('Images/game1.jpg');">
+                        <div class="card-body">
+                            <h5 class="card-title">SNAKE GAME</h5>
+                            <a href="Games/Games_output/game1_output.html" class="btn">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Card 2 -->
+                <div class="swiper-slide">
+                    <div class="card" style="background-image: url('Images/game2.jpg');">
+                        <div class="card-body">
+                            <h5 class="card-title">PING PONG</h5>
+                            <a href="Games/Games_output/game3_output.html" class="btn">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Card 3 -->
+                <div class="swiper-slide">
+                    <div class="card" style="background-image: url('Images/game3.jpg');">
+                        <div class="card-body">
+                            <h5 class="card-title">ALIEN INVASION</h5>
+                            <a href="Games/Games_output/game2_output.html" class="btn">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Card 4 -->
+                <div class="swiper-slide">
+                    <div class="card" style="background-image: url('Images/game4.jpg');">
+                        <div class="card-body">
+                            <h5 class="card-title">SPACE INVADERS</h5>
+                            <a href="#" class="btn">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Card 5 -->
+                <div class="swiper-slide">
+                    <div class="card" style="background-image: url('Images/game5.jpg');">
+                        <div class="card-body">
+                            <h5 class="card-title">PAC-MAN</h5>
+                            <a href="#" class="btn">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Card 6 -->
+                <div class="swiper-slide">
+                    <div class="card" style="background-image: url('Images/game6.jpg');">
+                        <div class="card-body">
+                            <h5 class="card-title">BREAKOUT</h5>
+                            <a href="#" class="btn">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Card 7 -->
+                <div class="swiper-slide">
+                    <div class="card" style="background-image: url('Images/game7.jpg');">
+                        <div class="card-body">
+                            <h5 class="card-title">TETRIS</h5>
+                            <a href="#" class="btn">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Card 8 -->
+                <div class="swiper-slide">
+                    <div class="card" style="background-image: url('Images/game8.jpg');">
+                        <div class="card-body">
+                            <h5 class="card-title">FROGGER</h5>
+                            <a href="#" class="btn">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Swiper Navigation Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+
+
+<footer class="footer">
+    <div class="faq">
+         <h3>Support</h3>
+         <ul>
+             <li><a href="#">About Us</a></li>
+             <li><a href="#">Help & Support</a></li>
+             <li><a href="#">Privacy Policy</a></li>
+             <li><a href="#">Terms of Service</a></li>    
+         </ul>
+    </div>
+ 
+    <div class="contact">
+         <h3>Contact Us</h3>
+         <p>For any inquiries or feedback, reach out to us:</p>
+         <div class="phone">
+             <p><strong>Phone:</strong> 1-800-GAME-123</p>
+         </div>
+         <div class="email">
+             <p><strong>Email:</strong> support@gamerush.com</p>
+         </div>
+         <div class="address">
+             <p><strong>Address:</strong> 1234 Game Street, Virtual City, World</p>
+         </div>
+         <div class="icons">
+             <a href="#"><i class='bx bxl-facebook'></i></a>
+             <a href="#"><i class='bx bxl-twitter'></i></a>
+             <a href="#"><i class='bx bxl-instagram'></i></a>
+             <a href="#"><i class='bx bxl-youtube'></i></a>
+         </div>
+    </div>
+ </footer>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

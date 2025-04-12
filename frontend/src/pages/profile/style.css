@@ -1,0 +1,240 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image:url('profilepage_img/background.jpg.png') ;
+    /* background: linear-gradient(0deg, rgba(147,34,195,1) 0%, rgba(72,45,253,1) 100%); */
+    /* background: linear-gradient(90deg, rgba(180,58,177,1) 1%, rgba(96,29,253,1) 57%, rgba(198,69,252,1) 100%); */
+}
+
+:root {
+    --bg1-color: rgba(119, 17, 253, 0.5);
+    --bg2-color: rgba(6, 1, 33);
+    --button1-color: rgba(6,1,33);
+    --button2-color: rgba(128,95,236);
+    /* --text1-color: #333; */
+    --text2-color: white;
+    --border-color:#8c20f1;
+    --exp1-color: rgba(6, 1, 33);
+    --exp2-color: rgba(128, 95, 236);
+}
+
+.container {
+    max-width: 900px;
+    margin-top: 105px;
+    margin-left: 180px;
+    margin-bottom: 50px;
+    background-color: var(--bg2-color);
+    /* background: linear-gradient(90deg, rgba(134, 207, 255, 0.7) 0%, rgba(115, 229, 255, 0.7) 32%, rgba(255, 255, 255, 0.7) 100%); */
+    border-radius: 10vh;
+    border: 2px solid var(--border-color);
+    padding: 20px;
+    box-shadow: 0 0 25px var(--border-color);
+}
+
+
+
+h4 {
+    font-size: 25px;
+    
+    margin-bottom: 50px;
+    margin-left: 350px;
+}
+
+.card2 {
+    /* background:var(--bg1-color) ; */
+    background: linear-gradient(45deg, var(--exp1-color), var(--exp2-color));
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 20px;
+}
+
+.account-settings-links {
+    list-style: none;
+    padding: 0;
+    margin:0;
+    
+}
+
+.account-settings-links a {
+    display: block;
+    padding: 10px;
+    color: var(--text2-color);
+    text-decoration: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background: var(--bg1-color);
+    border-bottom: 2px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+}
+
+.account-settings-links a.active {
+    background-color: var(--button1-color);
+    color: var(--text2-color);
+}
+
+.account-settings-links a:hover {
+    background-color: var(--button1-color);
+    color: var(--text2-color);
+}
+
+.tab-content {
+    padding-left: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    color:white;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    background-color:rgba(6,1,33);
+    border-radius: 10px;
+    color: var(--text2-color);
+}
+
+.file-upload-wrapper {
+    display: inline-block;
+    margin-left: 30px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: var(--button1-color); /* Button background color */
+    color: var(--text2-color); /* Button text color */
+    padding: 10px 10px; /* Button padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 16px;
+}
+
+.file-upload-wrapper input[type="file"] {
+    position:absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-upload-text {
+    pointer-events: none;
+    
+}
+
+.button {
+    display: absolute;
+    padding: 10px 20px;
+    /* background:linear-gradient(var(--button1-color), var(--button2-color),var(--button1-color),var(--button2-color)); */
+    color: var(--text1-color);
+   
+    cursor: pointer;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    border:none;
+    margin-left: 50px;
+}
+
+
+
+
+.button2 {
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--button1-color);
+    color: var(--text2-color);
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+/* .button2:hover {
+    background-color: var(--button2-color);
+} */
+
+.media {
+    display: flex;
+    align-items: center;
+    /* overflow: hidden; */
+}
+
+.media img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin-left: 100px;
+    margin-bottom: 10px;
+}
+
+.media-body {
+    display: flex;
+    margin-left: 20px;
+}
+
+.small {
+    font-size: 12px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.switcher {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.switcher input {
+    margin-right: 10px;
+}
+
+.switcher-label {
+    font-size: 16px;
+    color: var(--text2-color);
+}
+
+.custom-select {
+    width: 100%;
+    padding: 8px;
+    background: rgba(6,1,33);
+    color: var(--text2-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+
+.span {
+    font-size: 16px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.card2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.col-md-3 {
+    flex: 1;
+}
+
+.col-md-9 {
+    flex: 3;
+}
+
+.card2 h6 {
+    color: var(--text2-color);
+    font-size: 18px;
+}
